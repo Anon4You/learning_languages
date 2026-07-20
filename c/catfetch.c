@@ -8,11 +8,13 @@
 
 char *run_cmd(char *cmd){
     FILE *pp=popen(cmd, "r");
+    if(!pp) return NULL;
 
     char *output=NULL;
     size_t size=0;
 
     getline(&output, &size, pp);
+    pclose(pp);
 
     output[strcspn(output, "\n")]='\0';
 
@@ -71,6 +73,8 @@ int main(){
         printf("%s%s %s%s %s%s\n", gulabi,logo[i], hara,text[i], safed,tinfo[i]);
     }
 
-
+    free(os); free(krnl); free(mchn);
+    free(uptm); free(pkgs); free(mem);
+    free(shl);
     return 0;
 }
