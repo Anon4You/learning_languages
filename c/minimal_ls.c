@@ -1,3 +1,6 @@
+// Not ready for productions
+// minimal ls in c using termux
+
 #include <bits/getopt.h>
 #include <linux/limits.h>
 #include <linux/stat.h>
