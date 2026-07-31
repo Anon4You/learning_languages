@@ -59,7 +59,7 @@ void lngprnt(char *path, char *name){
 
 
     char tmbufff[64];
-    strftime(tmbufff, sizeof(tmbufff), "%a %b %d %H:%M", localtime(&st.st_atime));
+    strftime(tmbufff, sizeof(tmbufff), "%a %b %d %H:%M", localtime(&st.st_mtime));
 
 
     printf("%s %3ld %s %s %6ld %s %s\n", prms, (long)st.st_nlink, owner, group, st.st_size, tmbufff, name);
