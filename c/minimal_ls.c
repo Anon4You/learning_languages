@@ -80,7 +80,7 @@ int main(int argc, char **argv){
                 show_lng = 1;
                 break;
             default:
-                fprintf(stderr, "Usage %s -a <path>\n", argv[0]);
+                fprintf(stderr, "Usage %s <-a/-l> <path>\n", argv[0]);
                 return 1;
         }
     }
